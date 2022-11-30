@@ -48,9 +48,9 @@ div {
 
 .contenedor {
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
-
+/* Javi si lees esto te amo */
 .contenedor-ancho{
     width: 100%;
 }
@@ -63,7 +63,7 @@ div {
 .texto-grande {
     font-size: 28px;
     color: var(--color-principal);
-    text-align: justify;
+    font-weight: lighter;
 }
 
 /* -- Articulo -- */
@@ -72,28 +72,25 @@ div {
     flex-direction: row;
     gap: 20px;
     padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient(to left top, #d63c3c, #da4444, #dd4d4c, #e05454, #e35c5c);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
 }
 
 .imagen-articulo {
     max-height: 300px;
     width: auto;
+    align-self: center;
 }
 
 .articulo-contenido {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     width: 100%;
 }
 
 .titulo-articulo {
     font-weight: bold;
-}
-
-.articulo-contenido p {
-    color: var(--color-blanco);
+    color: var(--color-principal);
 }
 
 .enlace-articulo {
@@ -119,7 +116,7 @@ div {
 
     height: 80px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-    background-color: var(--color-blanco);
+    background-image: linear-gradient(to left top, #d63c3c, #da4444, #dd4d4c, #e05454, #e35c5c);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -137,6 +134,12 @@ div {
 
 .navegacion--enlace {
     transition: all .4s ease;
+    color: var(--color-blanco);
+}
+
+.navegacion--enlace:hover {
+    color:  var(--color-blanco);
+    text-shadow: 0 0 7px rgb(255, 255, 255);
 }
 
 /* -- Cuerpo -- */
@@ -148,7 +151,6 @@ main {
 
 .titulo-cabecera {
     font-size: 42px;
-    color: var(--color-negro);
     font-weight: lighter;
     padding: 20px 0;
 }
@@ -163,7 +165,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    z-index: 1;
 }
 
 .titulo-cabecera span:nth-child(even) {
@@ -173,11 +174,10 @@ main {
     top: 20px;
 }
 
-
 .introduccion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+    grid-gap: 40px;
 }
 
 .introduccion .articulo-contenedor:nth-last-of-type(1) {
@@ -198,6 +198,7 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
 }
 
 .nuestros-productos_textos{
@@ -209,21 +210,61 @@ main {
 .nuestros-productos_textos h2, h3, h4 {
     width: fit-content;
 }
+
 .nuestros-productos h2 {
     font-size: 52px;
     background-color: var(--color-negro);
     color: var(--color-blanco);
     padding: 10px;
 }
+
 .nuestros-productos h3 {
     font-size: 32px;
     color: var(--color-secundario);
 }
+
 .nuestros-productos h4 {
     font-size: 28px;
 }
+
 .nuestros-productos h4 span {
     color: var(--color-principal);
     font-weight: 800;
     font-size: 38px;
+}
+
+.titulo-seccion {
+    font-size: 60px;
+    color: var(--color-blanco);
+    margin: 30px 0;
+}
+
+.titulo-seccion span {
+    background-color: var(--color-principal);
+    padding: 10px;
+    display: inline-block;
+    transform: rotate(5deg);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.preguntas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.seccion-pregunta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.seccion-pregunta .texto-grande span {
+    text-transform: uppercase;
+    color: var(--color-principal-oscuro);
+    font-weight: bold;
+    padding: 0 3px;
 }
