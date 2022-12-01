@@ -4,9 +4,10 @@
     --color-principal: rgb(214, 60, 60);
     --color-principal-oscuro: rgb(145, 42, 42);
     --color-secundario: rgb(65, 224, 105);
-    --color-negro: rgb(15, 15, 15);
+    --color-negro: rgb(25, 25, 25);
     --color-gris: rgb(235, 235, 235);
     --color-blanco: rgb(245, 245, 245);
+    --gradiente-color-principal: linear-gradient(to left top, #c93131, #ce3a3a, #dd4d4c, #e65f5f, #ec6c6c);
 }
 
 p,
@@ -116,7 +117,7 @@ div {
 
     height: 80px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient(to left top, #d63c3c, #da4444, #dd4d4c, #e05454, #e35c5c);
+    background-image: var(--gradiente-color-principal);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -240,7 +241,7 @@ main {
 }
 
 .titulo-seccion span {
-    background-color: var(--color-principal);
+    background-image: var(--gradiente-color-principal);
     padding: 10px;
     display: inline-block;
     transform: rotate(5deg);
@@ -251,6 +252,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    padding: 0 5%;
 }
 
 .seccion-pregunta {
@@ -267,4 +269,11 @@ main {
     color: var(--color-principal-oscuro);
     font-weight: bold;
     padding: 0 3px;
+}
+
+/* - Pie Página -- */
+footer {
+    margin-top: 40px;
+    min-height: 140px;
+    background-color: var(--color-negro);
 }
