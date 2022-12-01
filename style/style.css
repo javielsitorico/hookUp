@@ -51,7 +51,7 @@ div {
     width: 90%;
     margin: 10px auto;
 }
-/* Javi si lees esto te amo */
+
 .contenedor-ancho{
     width: 100%;
 }
@@ -276,4 +276,27 @@ footer {
     margin-top: 40px;
     min-height: 140px;
     background-color: var(--color-negro);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: center;
+}
+
+footer .links-iconos {
+    flex: 1;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .cookies {
+    flex: 2;
+}
+
+footer .cookies p {
+    font-size: 12px;
+    color: var(--color-blanco);
+    max-width: 90%;
+    margin: 0 auto;
 }
